@@ -46,3 +46,10 @@ Examples:
 ✅ Draft with 5 bullet points showing the high-level plan, in terse detail
 
 Drafts are often not close to the final version, so they should be optimized for quick review, editing and deletion. Long drafts take a long time to read and are hard to edit - editing often involves not only the overall structure and order and message, but also the word-by-word minutiae and phrasing. Short bullet-point drafts are easy to read, quick to reorder and edit, and each point is also easy to delete.
+
+Keep edits to working copies constrained and surgical, using diffs:
+
+- ❌ Add market data to the quotes in this working copy case study
+  ✅ para 3: add market data to quotes in this working copy case study. keep edits surgical. show me a diff
+
+To further constrain and review AI changes, consider setting up version control tools like Git.
