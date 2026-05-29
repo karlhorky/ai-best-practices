@@ -81,13 +81,13 @@ UI should show current state clearly: unsupported, supported preset found, insta
 
 Chrome extension for customized PWA installs.
 
-* popup with form fields: `start_url`, `name`, `icons`, `display`, `theme_color`, explicit `id`
-* maintained, tested presets for supported websites, kind of like a PWA-only version of [`refined-github`](https://github.com/refined-github/refined-github) or [`refined-gmail`](https://github.com/karlhorky/refined-gmail-userscript)
-  * prefills fields only, editable before install
-* failure handling for existing manifest conflicts, CSP blocks, Trusted Types blocks and fallback to Local Overrides / manual install steps
-* possibly required install safety checks?
-  *  `start_url` must stay valid for the manifest/app origin, otherwise Chrome may fall back to the install page URL 
-  *  explicit `id` avoids `start_url` accidentally becoming app identity
+- popup with form fields: `start_url`, `name`, `icons`, `display`, `theme_color`, explicit `id`
+- maintained, tested presets for supported websites, kind of like a PWA-only version of [`refined-github`](https://github.com/refined-github/refined-github) or [`refined-gmail`](https://github.com/karlhorky/refined-gmail-userscript)
+  - prefills fields only, editable before install
+- failure handling for existing manifest conflicts, CSP blocks, Trusted Types blocks and fallback to Local Overrides / manual install steps
+- possibly required install safety checks?
+  - `start_url` must stay valid for the manifest/app origin, otherwise Chrome may fall back to the install page URL 
+  - explicit `id` avoids `start_url` accidentally becoming app identity
 ```
 
 Drafts are often not close to the final version, so they should be optimized for quick review, editing and deletion. Long drafts take a long time to read and are hard to edit - editing often involves not only the overall structure and order and message, but also the word-by-word minutiae and phrasing. Short bullet-point drafts are easy to read, quick to reorder and edit, and each point is also easy to delete.
