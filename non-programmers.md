@@ -45,6 +45,51 @@ Examples:
 
 ✅ Draft with 5 bullet points showing the high-level plan, in terse detail
 
+Examples:
+
+```txt
+❌ Title: Chrome extension for customized PWA installs
+
+Description:
+
+Chrome extension for installing tested, refined PWA variants of supported websites, with optional manual customization.
+
+Ship hardcoded verified presets, similar in flavor to Refined GitHub, Refined Gmail and Better-X extensions. Each preset defines a known-good custom manifest for a specific website: `start_url`, `name`, `icons`, `display`, `theme_color` and explicit `id`.
+
+User flow:
+- detect supported websites and suggest matching presets
+- choose a verified website preset
+- prefill editable manifest fields from the preset
+- allow changes before install
+- allow fully custom manifest overrides for unsupported websites
+- apply the custom manifest to the current page where possible
+- guide users into Chrome's native PWA install prompt
+
+Constraints:
+- not silent install, Chrome still owns final install confirmation
+- presets must be tested and marked verified per website
+- `start_url` must stay valid for the manifest/app origin, otherwise Chrome may fall back to the install page URL
+- explicit manifest `id` avoids `start_url` accidentally becoming app identity
+- injection can fail when the page already has a manifest, CSP blocks inline/data manifests or Trusted Types blocks DOM mutation
+- fallback path should document when Local Overrides or manual install steps are still required
+
+UI should show current state clearly: unsupported, supported preset found, installable, patched, blocked by CSP, blocked by existing manifest or blocked by browser behavior.
+```
+
+```txt
+✅ Title: Chrome extension for customized PWA installs
+
+Chrome extension for customized PWA installs.
+
+- popup with form fields: `start_url`, `name`, `icons`, `display`, `theme_color`, explicit `id`
+- maintained, tested presets for supported websites, kind of like a PWA-only version of [[`refined-github`](https://github.com/refined-github/refined-github)](https://github.com/refined-github/refined-github) or [[`refined-gmail`](https://github.com/karlhorky/refined-gmail-userscript)](https://github.com/karlhorky/refined-gmail-userscript)
+  - prefills fields only, editable before install
+- failure handling for existing manifest conflicts, CSP blocks, Trusted Types blocks and fallback to Local Overrides / manual install steps
+- possibly required install safety checks?
+  -  `start_url` must stay valid for the manifest/app origin, otherwise Chrome may fall back to the install page URL 
+  -  explicit `id` avoids `start_url` accidentally becoming app identity
+```
+
 Drafts are often not close to the final version, so they should be optimized for quick review, editing and deletion. Long drafts take a long time to read and are hard to edit - editing often involves not only the overall structure and order and message, but also the word-by-word minutiae and phrasing. Short bullet-point drafts are easy to read, quick to reorder and edit, and each point is also easy to delete.
 
 Keep edits to working copies constrained and surgical, using diffs:
